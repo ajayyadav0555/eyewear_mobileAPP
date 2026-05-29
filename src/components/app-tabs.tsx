@@ -11,20 +11,26 @@ export default function AppTabs() {
     <NativeTabs
       backgroundColor={colors.background}
       indicatorColor={colors.backgroundElement}
-      labelStyle={{ selected: { color: colors.text } }}>
+      labelStyle={{ selected: { color: colors.text,fontSize:0 } }
+      }>
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/home.png')}
-          renderingMode="template"
+          sf={'house'}
+          md={'home'}
         />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="explore">
         <NativeTabs.Trigger.Label>Explore</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/explore.png')}
-          renderingMode="template"
+          sf={'heart'}
+          md={'favorite'} />
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="home2">
+        <NativeTabs.Trigger.Label>Home2</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          sf={'gearshape.arrow.triangle.2.circlepath'} md={'settings'}
         />
       </NativeTabs.Trigger>
     </NativeTabs>
